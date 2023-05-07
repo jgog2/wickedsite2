@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="prefetch" href="3dtest.html">
     <title>Jerry | WICKED MEDIA</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
@@ -9,8 +10,11 @@
   </head>
   <body>
     <header>
-      <img src="wickedmediapng.png" alt="Wicked Media Logo" width="100" height="100">
-      <h1 class="title">Jerry</h1>
+      <video src="public/headervideo.mp4" autoplay loop muted></video>
+      <div class="header-content">
+      <img src="public/wickedmediapng.png" alt="Wicked Media Logo" width="200" height="200">
+      <img src="public/wickedtext.png" alt="Wicked Media" width="400" height="60" style="display: block; margin: 0 auto;">
+      <h1 class="title" style="color: white;">Jerry</h1>
     </header>
     <nav>
       <ul>
@@ -21,20 +25,23 @@
     </nav>
     <a style="text-decoration: none" href="shop.html">
       <div class="shop-row">
+        <video class="video-background" preload="auto" autoplay="autoplay" loop="loop" muted="muted">
+          <source src="public/shoprack.mp4" type="video/mp4">
+        </video>
         <div class="shop-text">SHOP</div>
       </div>
-    </a>
+    </a>     
     <main>
-      <p class="content">So WickedMedia</p>
+      <p class="content">Till' WickedMedia do us part...</p>
       <p class="content">WICKED CONTENT LOADING...</p>
-      <canvas id="canvas"></canvas>
-      <script src="js/three.module.js"></script>
+      <a href="3dtest.html"><button class="button-jerry">Change Model</button></a>
+      <canvas id="canvas" width="100%" height="100%"></canvas>
       <script src="js/three.js"></script>
       <script src="js/index.js"></script>
-      <script src="js/main.js"></script>
     </main>
     <footer>
       <p class="footer">&copy; WICKED MEDIA 2023</p>
+      <script src="js\scroll-pos-saver.js"></script>
     </footer>
   </body>
 </html>

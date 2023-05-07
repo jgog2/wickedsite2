@@ -3,11 +3,25 @@ var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 
 var renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas'), antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setClearColor(0x000000, 0); // Set the clear color to transparent
 
+// Load texture image
+var textureLoader = new THREE.TextureLoader();
+var texture = textureLoader.load('public/diamond_ore.png');
+
+var material = new THREE.MeshPhongMaterial({ map: texture });
 var geometry = new THREE.BoxGeometry(1, 1, 1);
-var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+
 var cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
+
+// Add lights to the scene for shading
+var ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+
+var pointLight = new THREE.PointLight(0xffffff, 0.5);
+pointLight.position.set(2, 2, 2);
+scene.add(pointLight);
 
 camera.position.z = 3;
 
@@ -65,7 +79,7 @@ function animate() {
 
   cube.rotation.x += (targetRotationY - cube.rotation.x) * 0.05;
   cube.rotation.y += (targetRotationX - cube.rotation.y) * 0.05;
-
+  cube.position.set(0, -0.5, 0);
   renderer.render(scene, camera);
 }
 

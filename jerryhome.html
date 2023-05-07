@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js\scroll-pos-saver.js"></script>
+    <link rel="prefetch" href="3dtest.html">
+    <title>Jerry | WICKED MEDIA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <header>
+        <video src="public/headervideo.mp4" autoplay loop muted></video>
+        <div class="header-content">
+      <img src="public/wickedmediapng.png" alt="Wicked Media Logo" width="200" height="200">
+      <img src="public/wickedtext.png" alt="Wicked Media" width="400" height="60" style="display: block; margin: 0 auto;">
+      <h1 class="title" style="color: white;">Jerry</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a class="nav-link" href="https://www.paypal.com/us/home" target="_blank">Support</a></li>
+      </ul>
+    </nav>
+    <a style="text-decoration: none" href="shop.html">
+        <div class="shop-row">
+          <video class="video-background" preload="auto" autoplay="autoplay" loop="loop" muted="muted">
+            <source src="public/shoprack.mp4" type="video/mp4">
+          </video>
+          <div class="shop-text">SHOP</div>
+        </div>
+      </a>      
+    <main>
+      <p class="content">Till' WickedMedia do us part...</p>
+      <p class="content">WICKED CONTENT LOADING...</p>
+      <a href="3dtest.html"><button class="button-jerry">Change Model</button></a>
+      <canvas id="canvas" width="100%" height="100%"></canvas>
+      <script src="js/three.js"></script>
+      <script src="js/index.js"></script>
+    </main>
+    <footer>
+      <p class="footer">&copy; WICKED MEDIA 2023</p>
+    </footer>
+  </body>
+</html>
